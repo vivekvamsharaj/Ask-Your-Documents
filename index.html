@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocuMind AI - Document QA System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>DocuMind <span>AI</span></h2>
+            </div>
+            
+            <div class="upload-section">
+                <h3>Upload Documents</h3>
+                <div class="drop-zone" id="dropZone">
+                    <span class="drop-zone__prompt">Drag & drop files here or click to upload</span>
+                    <input type="file" name="myFile" id="fileInput" class="drop-zone__input" accept=".pdf,.txt" multiple>
+                </div>
+                <div id="fileList" class="file-list"></div>
+            </div>
+
+            <div class="system-status">
+                <div class="status-indicator indirect" id="statusDot"></div>
+                <span id="statusText">System Ready. Please upload a document.</span>
+            </div>
+        </aside>
+
+        <main class="chat-container">
+            <header class="chat-header">
+                <h2>Document Chat Assistant</h2>
+            </header>
+            
+            <div class="chat-messages" id="chatMessages">
+                <div class="message system-message">
+                    Hello! Upload a PDF or TXT file on the left, and I will answer any questions based on its content.
+                </div>
+            </div>
+
+            <form class="chat-input-area" id="chatForm">
+                <input type="text" id="userInput" placeholder="Ask something about your documents..." autocomplete="off" disabled>
+                <button type="submit" id="sendBtn" disabled>Send</button>
+            </form>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
